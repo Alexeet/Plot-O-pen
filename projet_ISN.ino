@@ -23,7 +23,7 @@ Servo servo;
 
 void setup() {
   Serial.begin(9600);
-  Servo.attach(10);
+  servo.attach(10);
   pinMode(switchX, INPUT);
   pinMode(switchY, INPUT);
   moteurX.setRpm(13);
@@ -77,6 +77,7 @@ boolean isIn(int X, int Y, int dx, int dy){
    }
    else{
     return true;
+    Serial.println("OK");
    }
 }
 
